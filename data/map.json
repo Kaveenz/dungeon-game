@@ -1,0 +1,1825 @@
+{
+    "start_state" : "0,0",
+
+    "states" : { 
+    
+        "0,0": {
+            "bk_img" : "walk_imgs/pos_1_a.jpg",
+            "other_imgs": [ {
+                                "src" : "imgs/tomato.gif",
+                                "x_cord" : 100,
+                                "y_cord" : 100,
+                                "width" : 10,
+                                "height" : 10
+                            }
+                        ],
+            "next_state" : [ {
+                                "state_name": "0,1",
+                                "key_input" : 38
+                             },
+                             { 
+                                "state_name": "0,0-b",
+                                "key_input" : 39
+                             },
+                             { 
+                                "state_name": "0,0-d",
+                                "key_input" : 37
+                             }
+                            ]
+        },
+        "0,0-b": {
+            "bk_img" : "walk_imgs/pos_1_b.jpg",
+            "next_state" : [ { 
+                                "state_name": "0,0",
+                                "key_input" : 37
+                             },
+                             { 
+                                "state_name": "0,0-c",
+                                "key_input" : 39
+                             }
+                            ]   
+        },
+        "0,0-c": {
+            "bk_img" : "walk_imgs/pos_1_c.jpg",
+            "next_state" : [ { 
+                                "state_name": "0,0-b",
+                                "key_input" : 37
+                             },
+                             { 
+                                "state_name": "0,0-d",
+                                "key_input" : 39
+                             }
+                            ]   
+        },
+        "0,0-d": {
+            "bk_img" : "walk_imgs/pos_1_d.jpg",
+            "next_state" : [ { 
+                                "state_name": "0,0",
+                                "key_input" : 39
+                             },
+                             { 
+                                "state_name": "0,0-c",
+                                "key_input" : 37
+                             },
+                             { 
+                                "state_name": "1d-deadend",
+                                "key_input" : 38
+                             }
+                            ]   
+        },
+        "1d-deadend": {
+         "bk_img" : "walk_imgs/1d-deadend.jpg",
+         "next_state" : [ 
+                          { 
+                             "state_name": "deadb",
+                             "key_input" : 39
+                          },
+                          { 
+                             "state_name": "deadd",
+                             "key_input" : 37
+                          },
+                          { 
+                             "state_name": "0,0",
+                             "key_input" : 40
+                          }
+                         ]   
+         },
+         "deadb": {
+            "bk_img" : "walk_imgs/deadb.jpg",
+            "next_state" : [ 
+                             { 
+                                "state_name": "1d-deadend",
+                                "key_input" : 37
+                             },
+                             { 
+                                "state_name": "deadc",
+                                "key_input" : 39
+                             }
+                             
+                            ]   
+            },
+            "deadc": {
+               "bk_img" : "walk_imgs/deadc.jpg",
+               "next_state" : [ 
+                                { 
+                                   "state_name": "deadb",
+                                   "key_input" : 37
+                                },
+                                { 
+                                   "state_name": "deadd",
+                                   "key_input" : 39
+                                },
+                                { 
+                                   "state_name": "0,0-b",
+                                   "key_input" : 38
+                                }
+                                
+                               ]   
+               },
+               "deadd": {
+                  "bk_img" : "walk_imgs/deadd.jpg",
+                  "next_state" : [ 
+                                   { 
+                                      "state_name": "deadc",
+                                      "key_input" : 37
+                                   },
+                                   { 
+                                      "state_name": "1d-deadend",
+                                      "key_input" : 39
+                                   }
+                                   
+                                  ]   
+                  },
+
+
+        "0,1": {
+            "bk_img" : "walk_imgs/pos_2_a.jpg",
+            "next_state" : [ {
+                                "state_name": "0,2",
+                                "key_input" : 38
+                             },
+                             { 
+                                "state_name": "0,1-b",
+                                "key_input" : 39
+                             },
+                             { 
+                                "state_name": "0,1-d",
+                                "key_input" : 37
+                             },
+                             { 
+                                "state_name": "0,0",
+                                "key_input" : 40
+                             }
+                            ]   
+        },
+        "0,1-b":{
+         "bk_img" : "walk_imgs/pos_2_b.jpg",
+         "next_state" : [ { 
+                             "state_name": "0,1",
+                             "key_input" : 37
+                          },
+                          { 
+                             "state_name": "0,1-c",
+                             "key_input" : 39
+                          }
+
+                         ]
+
+        },
+        "0,1-c":{
+         "bk_img" : "walk_imgs/pos_2_c.jpg",
+         "next_state" : [ { 
+                             "state_name": "0,1-b",
+                             "key_input" : 37
+                          },
+                          { 
+                             "state_name": "0,1-d",
+                             "key_input" : 39
+                          },
+                          {
+                           "state_name": "0,0-c",
+                           "key_input" : 38
+                           }
+
+                         ]
+
+        },
+        "0,1-d":{
+         "bk_img" : "walk_imgs/pos_2_d.jpg",
+         "next_state" : [ { 
+                             "state_name": "0,1-c",
+                             "key_input" : 37
+                          },
+                          { 
+                             "state_name": "0,1",
+                             "key_input" : 39
+                          },
+                          { 
+                             "state_name": "1,1",
+                             "key_input" : 38
+                          }
+
+                         ]
+
+        },
+        "1,1": {
+         "bk_img" : "walk_imgs/1,1.jpg",
+         "next_state" : [ 
+                          { 
+                             "state_name": "0,1-d",
+                             "key_input" : 40
+                          },
+                          { 
+                             "state_name": "1,1b",
+                             "key_input" : 39
+                          },
+                          { 
+                             "state_name": "1,1d",
+                             "key_input" : 37
+                          }
+                         ]   
+         },
+         "1,1b": {
+            "bk_img" : "walk_imgs/1,1b.jpg",
+            "next_state" : [ 
+                             
+                             { 
+                                "state_name": "1,1c",
+                                "key_input" : 39
+                             },
+                             { 
+                                "state_name": "1,1",
+                                "key_input" : 37
+                             }
+                            ]   
+            },
+            "1,1c": {
+               "bk_img" : "walk_imgs/1,1c.jpg",
+               "next_state" : [ 
+                                
+                                { 
+                                   "state_name": "1,1d",
+                                   "key_input" : 39
+                                },
+                                { 
+                                   "state_name": "1,1b",
+                                   "key_input" : 37
+                                },
+                                { 
+                                   "state_name": "0,1-b",
+                                   "key_input" : 38
+                                }
+                               ]   
+               },
+               "1,1d": {
+                  "bk_img" : "walk_imgs/1,1d.jpg",
+                  "next_state" : [ 
+                                   
+                                   { 
+                                      "state_name": "1,1",
+                                      "key_input" : 39
+                                   },
+                                   { 
+                                      "state_name": "1,1c",
+                                      "key_input" : 37
+                                   },
+                                   { 
+                                      "state_name": "1,1c",
+                                      "key_input" : 39
+                                   }
+                                  ]   
+                  },
+
+        "0,2": {
+         "bk_img" : "walk_imgs/pos_3_a.jpg",
+         "next_state" : [ 
+                          { 
+                             "state_name": "0,1",
+                             "key_input" : 40
+                          },
+                          { 
+                             "state_name": "0,2b",
+                             "key_input" : 39
+                          },
+                          { 
+                             "state_name": "0,2d",
+                             "key_input" : 37
+                          }
+
+                         ]   
+         },
+         "0,2b": {
+            "bk_img" : "walk_imgs/0,2b.png",
+            "next_state" : [ 
+                             
+                             { 
+                                "state_name": "0,2c",
+                                "key_input" : 39
+                             },
+                             { 
+                                "state_name": "0,2",
+                                "key_input" : 37
+                             }
+   
+                            ]   
+            },
+            "0,2c": {
+               "bk_img" : "walk_imgs/0,2c.png",
+               "next_state" : [ 
+                                
+                                { 
+                                   "state_name": "0,2d",
+                                   "key_input" : 39
+                                },
+                                { 
+                                   "state_name": "0,2b",
+                                   "key_input" : 37
+                                },
+                                { 
+                                   "state_name": "0,1-c",
+                                   "key_input" : 38
+                                }
+      
+                               ]   
+               },
+               "0,2d": {
+                  "bk_img" : "walk_imgs/0,2d.png",
+                  "next_state" : [ 
+                                   
+                                   { 
+                                      "state_name": "0,2",
+                                      "key_input" : 39
+                                   },
+                                   { 
+                                      "state_name": "0,2c",
+                                      "key_input" : 37
+                                   },
+                                   { 
+                                      "state_name": "1,2",
+                                      "key_input" : 38
+                                   }
+         
+                                  ]   
+                  },
+            
+         "1,2": {
+            "bk_img" : "walk_imgs/1,2.png",
+            "next_state" : [ 
+                             { 
+                                "state_name": "0,2d",
+                                "key_input" : 40
+                             },
+                             { 
+                                "state_name": "1,2b",
+                                "key_input" : 39
+                             },
+                             { 
+                                "state_name": "1,2d",
+                                "key_input" : 37
+                             },
+                             { 
+                                "state_name": "2,2",
+                                "key_input" : 38
+                             }
+                            ]   
+            },
+            "1,2b": {
+               "bk_img" : "walk_imgs/1,2b.png",
+               "next_state" : [ 
+                                
+                                { 
+                                   "state_name": "1,2c",
+                                   "key_input" : 39
+                                },
+                                { 
+                                   "state_name": "1,2",
+                                   "key_input" : 37
+                                }
+                               ]   
+               },
+               "1,2c": {
+            "bk_img" : "walk_imgs/1,2c.png",
+            "next_state" : [ 
+                             
+                             { 
+                                "state_name": "1,2d",
+                                "key_input" : 39
+                             },
+                             { 
+                                "state_name": "1,2b",
+                                "key_input" : 37
+                             },
+                             { 
+                                "state_name": "0,2b",
+                                "key_input" : 38
+                             }
+                             
+                            ]   
+            },
+            "1,2d": {
+               "bk_img" : "walk_imgs/1,2d.png",
+               "next_state" : [ 
+                                
+                                { 
+                                   "state_name": "1,2",
+                                   "key_input" : 39
+                                },
+                                { 
+                                   "state_name": "1,2c",
+                                   "key_input" : 37
+                                }
+                               ]   
+            },
+            "2,2": {
+               "bk_img" : "walk_imgs/2,2.png",
+               "next_state" : [ 
+                                { 
+                                   "state_name": "1,2",
+                                   "key_input" : 40
+                                },
+                                { 
+                                   "state_name": "2,2b",
+                                   "key_input" : 39
+                                },
+                                { 
+                                   "state_name": "2,2d",
+                                   "key_input" : 37
+                                }
+                                
+                              
+                               ]   
+               },
+               "2,2b": {
+                  "bk_img" : "walk_imgs/2,2b.png",
+                  "next_state" : [ 
+                                   
+                                   { 
+                                      "state_name": "2,2c",
+                                      "key_input" : 39
+                                   },
+                                   { 
+                                      "state_name": "2,2",
+                                      "key_input" : 37
+                                   },
+                                   { 
+                                   "state_name": "2,3",
+                                   "key_input" : 38
+                                  }
+                                 
+                                  ]   
+               },
+               "2,2c": {
+                  "bk_img" : "walk_imgs/2,2c.png",
+                  "next_state" : [ 
+                                   
+                                   { 
+                                      "state_name": "2,2d",
+                                      "key_input" : 39
+                                   },
+                                   { 
+                                      "state_name": "2,2b",
+                                      "key_input" : 37
+                                   }
+                                 
+                                  ]   
+                  },
+                  "2,2d": {
+                     "bk_img" : "walk_imgs/2,2d.png",
+                     "next_state" : [ 
+                                      
+                                      { 
+                                         "state_name": "2,2",
+                                         "key_input" : 39
+                                      },
+                                      { 
+                                         "state_name": "2,2c",
+                                         "key_input" : 37
+                                      }
+                                    
+                                     ]   
+                     },
+                     "2,3": {
+                        "bk_img" : "walk_imgs/2,3.png",
+                        "next_state" : [ 
+                                         
+                                         { 
+                                            "state_name": "2,3b",
+                                            "key_input" : 39
+                                         },
+                                         { 
+                                            "state_name": "2,3d",
+                                            "key_input" : 37
+                                         },
+                                         { 
+                                            "state_name": "2,2b",
+                                            "key_input" : 40
+                                         },
+                                         { 
+                                            "state_name": "2,4",
+                                            "key_input" : 38
+                                         }
+
+                                       
+                                        ]   
+                        },
+                        "2,3b": {
+                           "bk_img" : "walk_imgs/2,3b.png",
+                           "next_state" : [ 
+                                            
+                                            { 
+                                               "state_name": "2,3c",
+                                               "key_input" : 39
+                                            },
+                                            { 
+                                               "state_name": "2,3",
+                                               "key_input" : 37
+                                            }
+                                          
+                                           ]   
+                           },
+                           "2,3c": {
+                              "bk_img" : "walk_imgs/2,3c.png",
+                              "next_state" : [ 
+                                               
+                                               { 
+                                                  "state_name": "2,3d",
+                                                  "key_input" : 39
+                                               },
+                                               { 
+                                                  "state_name": "2,3b",
+                                                  "key_input" : 37
+                                               },
+                                               { 
+                                                  "state_name": "2,3c",
+                                                  "key_input" : 38
+                                               }
+                                               
+                                             
+                                              ]   
+                              },
+                              "2,3d": {
+                                 "bk_img" : "walk_imgs/2,3d.png",
+                                 "next_state" : [ 
+                                                  
+                                                  { 
+                                                     "state_name": "2,3",
+                                                     "key_input" : 39
+                                                  },
+                                                  { 
+                                                     "state_name": "2,3c",
+                                                     "key_input" : 37
+                                                  }
+                                                
+                                                 ]   
+                                 },
+                                 "2,4": {
+                                    "bk_img" : "walk_imgs/2,4.png",
+                                    "next_state" : [ 
+                                                     
+                                                     { 
+                                                        "state_name": "2,4b",
+                                                        "key_input" : 39
+                                                     },
+                                                     { 
+                                                        "state_name": "2,4d",
+                                                        "key_input" : 37
+                                                     },
+                                                     { 
+                                                        "state_name": "2,3",
+                                                        "key_input" : 40
+                                                     }
+                                                     
+            
+                                                   
+                                                    ]   
+                                    },
+                                    "2,4b": {
+                                       "bk_img" : "walk_imgs/2,4b.png",
+                                       "next_state" : [ 
+                                                        
+                                                        { 
+                                                           "state_name": "2,4c",
+                                                           "key_input" : 39
+                                                        },
+                                                        { 
+                                                           "state_name": "2,4",
+                                                           "key_input" : 37
+                                                        },
+                                                        { 
+                                                           "state_name": "1,4",
+                                                           "key_input" : 38
+                                                        }
+
+                                                      
+                                                       ]   
+                                       },
+                                       "2,4c": {
+                                          "bk_img" : "walk_imgs/2,4c.png",
+                                          "next_state" : [ 
+                                                           
+                                                           { 
+                                                              "state_name": "2,4d",
+                                                              "key_input" : 39
+                                                           },
+                                                           { 
+                                                              "state_name": "2,4b",
+                                                              "key_input" : 37
+                                                           }
+                                                         
+                                                          ]   
+                                          },
+                                          "2,4d": {
+                                             "bk_img" : "walk_imgs/2,4d.png",
+                                             "next_state" : [ 
+                                                              
+                                                              { 
+                                                                 "state_name": "2,4",
+                                                                 "key_input" : 39
+                                                              },
+                                                              { 
+                                                                 "state_name": "2,4c",
+                                                                 "key_input" : 37
+                                                              },
+                                                              { 
+                                                                 "state_name": "3,4",
+                                                                 "key_input" : 38
+                                                              }
+                                                            
+                                                             ]   
+                                             },
+                                             "1,4": {
+                                                "bk_img" : "walk_imgs/1,4.png",
+                                                "next_state" : [ 
+                                                                 
+                                                                 { 
+                                                                    "state_name": "1,4b",
+                                                                    "key_input" : 39
+                                                                 },
+                                                                 { 
+                                                                    "state_name": "1,4d",
+                                                                    "key_input" : 37
+                                                                 },
+                                                                 { 
+                                                                    "state_name": "2,3b",
+                                                                    "key_input" : 40
+                                                                 },
+                                                                 { 
+                                                                    "state_name": "0,4",
+                                                                    "key_input" : 38
+                                                                 }
+                                                                 
+                        
+                                                               
+                                                                ]   
+                                                },           
+                                                "1,4b": {
+                                                   "bk_img" : "walk_imgs/1,4b.png",
+                                                   "next_state" : [ 
+                                                                    
+                                                                    { 
+                                                                       "state_name": "1,4c",
+                                                                       "key_input" : 39
+                                                                    },
+                                                                    { 
+                                                                       "state_name": "1,4",
+                                                                       "key_input" : 37
+                                                                    }
+                                                                  
+                                                                   ]   
+                                                   },
+                                                   "1,4c": {
+                                                      "bk_img" : "walk_imgs/1,4c.png",
+                                                      "next_state" : [ 
+                                                                       
+                                                                       { 
+                                                                          "state_name": "1,4d",
+                                                                          "key_input" : 39
+                                                                       },
+                                                                       { 
+                                                                          "state_name": "1,4b",
+                                                                          "key_input" : 37
+                                                                       },
+                                                                       { 
+                                                                          "state_name": "2,4d",
+                                                                          "key_input" : 38
+                                                                       }
+                                                                     
+                                                                      ]   
+                                                      },
+                                                      "1,4d": {
+                                                         "bk_img" : "walk_imgs/1,4d.png",
+                                                         "next_state" : [ 
+                                                                          
+                                                                          { 
+                                                                             "state_name": "1,4",
+                                                                             "key_input" : 39
+                                                                          },
+                                                                          { 
+                                                                             "state_name": "1,4c",
+                                                                             "key_input" : 37
+                                                                          }
+                                                                        
+                                                                         ]   
+                                                         },
+                                                         "3,4": {
+                                                            "bk_img" : "walk_imgs/3,4.png",
+                                                            "next_state" : [ 
+                                                                             
+                                                                             { 
+                                                                                "state_name": "3,4b",
+                                                                                "key_input" : 39
+                                                                             },
+                                                                             { 
+                                                                                "state_name": "3,4d",
+                                                                                "key_input" : 37
+                                                                             },
+                                                                             { 
+                                                                                "state_name": "2,4d",
+                                                                                "key_input" : 40
+                                                                             },
+                                                                             { 
+                                                                                "state_name": "4,4",
+                                                                                "key_input" : 38
+                                                                             }
+                                                                             
+                                    
+                                                                           
+                                                                            ]   
+                                                            },
+                                           "3,4b": {
+                                                 "bk_img" : "walk_imgs/3,4b.png",
+                                                "next_state" : [ 
+                                                                                
+                                                                { 
+                                                                 "state_name": "3,4c",
+                                                                 "key_input" : 39
+                                                                },
+                                                                { 
+                                                                  "state_name": "3,4",
+                                                                  "key_input" : 37
+                                                                }
+                                                                              
+                                                                ]   
+                                           },
+                                           "3,4c": {
+                                             "bk_img" : "walk_imgs/3,4c.png",
+                                            "next_state" : [ 
+                                                                            
+                                                            { 
+                                                             "state_name": "3,4d",
+                                                             "key_input" : 39
+                                                            },
+                                                            { 
+                                                              "state_name": "3,4b",
+                                                              "key_input" : 37
+                                                            },
+                                                            { 
+                                                              "state_name": "2,4b",
+                                                              "key_input" : 38
+                                                            }
+                                                                          
+                                                            ]   
+                                       },
+                                       "3,4d": {
+                                          "bk_img" : "walk_imgs/3,4d.png",
+                                         "next_state" : [ 
+                                                                         
+                                                         { 
+                                                          "state_name": "3,4",
+                                                          "key_input" : 39
+                                                         },
+                                                         { 
+                                                           "state_name": "3,4c",
+                                                           "key_input" : 37
+                                                         }
+                                                                       
+                                                         ]   
+                                    },
+                                    "0,4": {
+                                       "bk_img" : "walk_imgs/0,4.png",
+                                       "next_state" : [ 
+                                                        
+                                                        { 
+                                                           "state_name": "0,4b",
+                                                           "key_input" : 39
+                                                        },
+                                                        { 
+                                                           "state_name": "0,4d",
+                                                           "key_input" : 37
+                                                        },
+                                                        { 
+                                                           "state_name": "1,4b",
+                                                           "key_input" : 40
+                                                        }
+                                                        
+               
+                                                      
+                                                       ]   
+                                       },
+                                       "0,4b": {
+                                          "bk_img" : "walk_imgs/0,4b.png",
+                                          "next_state" : [ 
+                                                           
+                                                           { 
+                                                              "state_name": "0,4c",
+                                                              "key_input" : 39
+                                                           },
+                                                           { 
+                                                              "state_name": "0,4",
+                                                              "key_input" : 37
+                                                           }
+                                                         
+                                                          ]   
+                                          },
+                                          "0,4c": {
+                                             "bk_img" : "walk_imgs/0,4c.png",
+                                             "next_state" : [ 
+                                                              
+                                                              { 
+                                                                 "state_name": "0,4d",
+                                                                 "key_input" : 39
+                                                              },
+                                                              { 
+                                                                 "state_name": "0,4b",
+                                                                 "key_input" : 37
+                                                              },
+                                                              { 
+                                                                 "state_name": "1,4c",
+                                                                 "key_input" : 38
+                                                              }
+                                                              
+                                                            
+                                                             ]   
+                                             },
+                                             "0,4d": {
+                                                "bk_img" : "walk_imgs/0,4d.png",
+                                                "next_state" : [ 
+                                                                 
+                                                                 { 
+                                                                    "state_name": "0,4",
+                                                                    "key_input" : 39
+                                                                 },
+                                                                 { 
+                                                                    "state_name": "0,4c",
+                                                                    "key_input" : 37
+                                                                 },
+                                                                 { 
+                                                                    "state_name": "0,5",
+                                                                    "key_input" : 38
+                                                                 }
+                                                                 
+                                                               
+                                                                ]   
+                                                },
+                                                "0,5": {
+                                                   "bk_img" : "walk_imgs/0,5.png",
+                                                   "next_state" : [ 
+                                                                    
+                                                                    { 
+                                                                       "state_name": "0,5b",
+                                                                       "key_input" : 39
+                                                                    },
+                                                                    { 
+                                                                       "state_name": "0,5d",
+                                                                       "key_input" : 37
+                                                                    },
+                                                                    { 
+                                                                       "state_name": "0,4d",
+                                                                       "key_input" : 40
+                                                                    }
+                                                                    
+                           
+                                                                  
+                                                                   ]   
+                                                   },
+                                                   "0,5b": {
+                                                      "bk_img" : "walk_imgs/0,5b.png",
+                                                      "next_state" : [ 
+                                                                       
+                                                                       { 
+                                                                          "state_name": "0,5c",
+                                                                          "key_input" : 39
+                                                                       },
+                                                                       { 
+                                                                          "state_name": "0,5",
+                                                                          "key_input" : 37
+                                                                       },
+                                                                       { 
+                                                                          "state_name": "-1,5",
+                                                                          "key_input" : 38
+                                                                       }
+
+                                                                      ]   
+                                                      },
+                                                      "0,5c": {
+                                                         "bk_img" : "walk_imgs/0,5c.png",
+                                                         "next_state" : [ 
+                                                                          
+                                                                          { 
+                                                                             "state_name": "0,5d",
+                                                                             "key_input" : 39
+                                                                          },
+                                                                          { 
+                                                                             "state_name": "0,5b",
+                                                                             "key_input" : 37
+                                                                          },
+                                                                          { 
+                                                                             "state_name": "0,4b",
+                                                                             "key_input" : 38
+                                                                          }
+   
+                                                                         ]   
+                                                         },
+                                                         "0,5d": {
+                                                            "bk_img" : "walk_imgs/0,5d.png",
+                                                            "next_state" : [ 
+                                                                             
+                                                                             { 
+                                                                                "state_name": "0,5",
+                                                                                "key_input" : 39
+                                                                             },
+                                                                             { 
+                                                                                "state_name": "0,5c",
+                                                                                "key_input" : 37
+                                                                             }
+      
+                                                                            ]   
+                                                            },
+                                                            "-1,5": {
+                                                               "bk_img" : "walk_imgs/-1,5.png",
+                                                               "next_state" : [ 
+                                                                                
+                                                                                { 
+                                                                                   "state_name": "-1,5b",
+                                                                                   "key_input" : 39
+                                                                                },
+                                                                                { 
+                                                                                   "state_name": "-1,5d",
+                                                                                   "key_input" : 37
+                                                                                },
+                                                                                { 
+                                                                                   "state_name": "0,5b",
+                                                                                   "key_input" : 40
+                                                                                },
+                                                                                {
+                                                                                 "state_name": "-2,5",
+                                                                                 "key_input" : 38
+                                                                              }
+                                                                                
+                                       
+                                                                              
+                                                                               ]   
+                                                               },
+                        "-1,5b": {
+                        "bk_img" : "walk_imgs/-1,5b.png",
+                        "next_state" : [ 
+                                                   
+                                       { 
+                                       "state_name": "-1,5c",
+                                       "key_input" : 39
+                                       },
+                                       { 
+                                       "state_name": "-1,5",
+                                       "key_input" : 37
+                                       }
+                                    ]   
+                                 },
+                                 "-1,5c": {
+                                    "bk_img" : "walk_imgs/-1,5c.png",
+                                    "next_state" : [ 
+                                                               
+                                                   { 
+                                                   "state_name": "-1,5d",
+                                                   "key_input" : 39
+                                                   },
+                                                   { 
+                                                   "state_name": "-1,5b",
+                                                   "key_input" : 37
+                                                   },
+                                                   { 
+                                                   "state_name": "0,5d",
+                                                   "key_input" : 38
+                                                   }
+
+                                                ]   
+                                             },
+                                             "-1,5d": {
+                                                "bk_img" : "walk_imgs/-1,5d.png",
+                                                "next_state" : [ 
+                                                                           
+                                                               { 
+                                                               "state_name": "-1,5",
+                                                               "key_input" : 39
+                                                               },
+                                                               { 
+                                                               "state_name": "-1,5c",
+                                                               "key_input" : 37
+                                                               }
+                                                            ]   
+                                                         },
+                                       "-2,5": {
+                                          "bk_img" : "walk_imgs/-2,5.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-2,5b",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-2,5d",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "-1,5",
+                                                "key_input" : 40
+                                             },
+                                             {
+                                                "state_name": "-3,5",
+                                                "key_input" : 38
+                                             }
+
+                                          ]
+                                       },
+                                       "-2,5b": {
+                                          "bk_img" : "walk_imgs/-2,5b.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-2,5c",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-2,5",
+                                                "key_input" : 37
+                                             }
+                                          ]
+                                       },
+                                       "-2,5c": {
+                                          "bk_img" : "walk_imgs/-2,5c.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-2,5d",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-2,5b",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "-1,5c",
+                                                "key_input" : 38
+                                             }
+                                          ]
+                                       },
+                                       "-2,5d": {
+                                          "bk_img" : "walk_imgs/-2,5d.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-2,5",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-2,5c",
+                                                "key_input" : 37
+                                             }
+                                          ]
+                                       },
+                                       "-3,5": {
+                                          "bk_img" : "walk_imgs/-3,5.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-3,5b",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-3,5d",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "-2,5",
+                                                "key_input" : 40
+                                             },
+                                             {
+                                                "state_name": "-4,5",
+                                                "key_input" : 38
+                                             }
+
+                                          ]
+                                       },
+                                       "-3,5b": {
+                                          "bk_img" : "walk_imgs/-3,5b.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-3,5c",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-3,5",
+                                                "key_input" : 37
+                                             }
+                                          ]
+                                       },
+                                       "-3,5c": {
+                                          "bk_img" : "walk_imgs/-3,5c.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-3,5d",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-3,5b",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "-2,5c",
+                                                "key_input" : 38
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "-3,5d": {
+                                          "bk_img" : "walk_imgs/-3,5d.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-3,5",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-3,5c",
+                                                "key_input" : 37
+                                             }
+                                          ]
+                                       },
+                                       "-4,5": {
+                                          "bk_img" : "walk_imgs/-4,5.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-4,5b",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-4,5d",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "-3,5",
+                                                "key_input" : 40
+                                             },
+                                             {
+                                                "state_name": "-5,5",
+                                                "key_input" : 38
+                                             }
+                                          ]
+                                       },
+                                       "-4,5b": {
+                                          "bk_img" : "walk_imgs/-4,5b.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-4,5c",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-4,5",
+                                                "key_input" : 37
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "-4,5c": {
+                                          "bk_img" : "walk_imgs/-4,5c.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-4,5d",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-4,5b",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "-3,5c",
+                                                "key_input" : 38
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "-4,5d": {
+                                          "bk_img" : "walk_imgs/-4,5d.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-4,5",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-4,5c",
+                                                "key_input" : 37
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "-5,5": {
+                                          "bk_img" : "walk_imgs/-5,5.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-5,5b",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-5,5d",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "-4,5",
+                                                "key_input" : 40
+                                             },
+                                             {
+                                                "state_name": "chest",
+                                                "key_input" : 38
+                                             }
+                                          ]
+                                       },
+                                       "-5,5b": {
+                                          "bk_img" : "walk_imgs/-5,5b.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-5,5c",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-5,5",
+                                                "key_input" : 37
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "-5,5c": {
+                                          "bk_img" : "walk_imgs/-5,5c.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-4,5d",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-5,5b",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "-4,5c",
+                                                "key_input" : 38
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "-5,5d": {
+                                          "bk_img" : "walk_imgs/-5,5d.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "-5,5",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "-5,5c",
+                                                "key_input" : 37
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "chest": {
+                                          "bk_img" : "walk_imgs/chest.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "chestb",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "chestd",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "-5,5",
+                                                "key_input" : 40
+                                             },
+                                             {
+                                                "state_name": "open",
+                                                "key_input" : 38
+                                             }
+                                          ]
+                                       },
+                                       "chestb": {
+                                          "bk_img" : "walk_imgs/chestb.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "chestc",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "chest",
+                                                "key_input" : 37
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "chestc": {
+                                          "bk_img" : "walk_imgs/chestc.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "chestd",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "chestb",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "-5,5c",
+                                                "key_input" : 38
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "chestd": {
+                                          "bk_img" : "walk_imgs/chestd.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "chest",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "chestc",
+                                                "key_input" : 37
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "open": {
+                                          "bk_img" : "imgs/empty.webp",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "chest",
+                                                "key_input" : 40
+                                             }
+                                          ]
+                                       },
+                                       "4,4": {
+                                          "bk_img" : "walk_imgs/4,4.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "4,4b",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "4,4d",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "3,4",
+                                                "key_input" : 40
+                                             },
+                                             {
+                                                "state_name": "5,4",
+                                                "key_input" : 38
+                                             }
+                                          ]
+                                       },
+                                       "4,4b": {
+                                          "bk_img" : "walk_imgs/4,4b.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "4,4c",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "4,4",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "4,5",
+                                                "key_input" : 38
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "4,4c": {
+                                          "bk_img" : "walk_imgs/4,4c.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "4,4d",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "4,4b",
+                                                "key_input" : 37
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "4,4d": {
+                                          "bk_img" : "walk_imgs/4,4d.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "4,4",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "4,4c",
+                                                "key_input" : 37
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "4,5": {
+                                          "bk_img" : "walk_imgs/4,5.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "4,5b",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "4,5d",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "4,4b",
+                                                "key_input" : 40
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "4,5b": {
+                                          "bk_img" : "walk_imgs/4,5b.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "4,5c",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "4,5",
+                                                "key_input" : 37
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "4,5c": {
+                                          "bk_img" : "walk_imgs/4,5c.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "4,5d",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "4,5b",
+                                                "key_input" : 37
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "4,5d": {
+                                          "bk_img" : "walk_imgs/4,5d.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "4,5",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "4,5c",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "5,5",
+                                                "key_input" : 38
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "5,5": {
+                                          "bk_img" : "walk_imgs/5,5.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "5,5b",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "5,5d",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "5,5d",
+                                                "key_input" : 40
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "5,5b": {
+                                          "bk_img" : "walk_imgs/5,5b.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "5,5c",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "5,5",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "passage",
+                                                "key_input" : 38
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "5,5c": {
+                                          "bk_img" : "walk_imgs/5,5c.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "5,5d",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "5,5b",
+                                                "key_input" : 37
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "5,5d": {
+                                          "bk_img" : "walk_imgs/5,5d.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "5,5",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "5,5c",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "5,4d",
+                                                "key_input" : 38
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "5,4": {
+                                          "bk_img" : "walk_imgs/5,4.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "5,4b",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "5,4d",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "4,4",
+                                                "key_input" : 40
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "5,4b": {
+                                          "bk_img" : "walk_imgs/5,4b.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "5,4c",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "5,4",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "5,5b",
+                                                "key_input" : 38
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "5,4c": {
+                                          "bk_img" : "walk_imgs/5,4c.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "5,4d",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "5,4b",
+                                                "key_input" : 37
+                                             }
+                                             
+
+                                             
+                                          ]
+                                       },
+                                       "5,4d": {
+                                          "bk_img" : "walk_imgs/5,4d.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "5,4",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "5,4c",
+                                                "key_input" : 37
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "passage": {
+                                          "bk_img" : "walk_imgs/passage.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "passage2",
+                                                "key_input" : 38
+                                             },
+                                             {
+                                                "state_name": "5,5b",
+                                                "key_input" : 40
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "passage2": {
+                                          "bk_img" : "walk_imgs/passage2.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "passage3",
+                                                "key_input" : 38
+                                             },
+                                             {
+                                                "state_name": "passage",
+                                                "key_input" : 40
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "passage3": {  
+                                          "bk_img" : "walk_imgs/passage3.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "6,5",
+                                                "key_input" : 38
+                                             },
+                                             {
+                                                "state_name": "passage2",
+                                                "key_input" : 40
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "6,5": {
+                                          "bk_img" : "walk_imgs/6,5.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "6,5b",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "6,5d",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "passage3",
+                                                "key_input" : 40
+                                             },
+                                             {
+                                                "state_name": "stairs",
+                                                "key_input" : 38
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "6,5b": {
+                                          "bk_img" : "walk_imgs/6,5b.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "6,5c",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "6,5",
+                                                "key_input" : 37
+                                             }
+ 
+                                          ]
+                                       },
+                                       "6,5c": {
+                                          "bk_img" : "walk_imgs/6,5c.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "6,5d",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "6,5b",
+                                                "key_input" : 37
+                                             }
+ 
+                                          ]
+                                       },
+                                       "6,5d": {
+                                          "bk_img" : "walk_imgs/6,5d.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "6,5",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "6,5c",
+                                                "key_input" : 37
+                                             }
+ 
+                                          ]
+                                       },
+                                       "stairs": {
+                                          "bk_img" : "walk_imgs/stairs.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "end",
+                                                "key_input" : 38
+                                             },
+                                             {
+                                                "state_name": "6,5",
+                                                "key_input" : 40
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "end": {
+                                          "bk_img" : "walk_imgs/end.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "dlc",
+                                                "key_input" : 38
+                                             },
+                                             {
+                                                "state_name": "chestR",
+                                                "key_input" : 39
+                                             },
+                                             {
+                                                "state_name": "chestL",
+                                                "key_input" : 37
+                                             },
+                                             {
+                                                "state_name": "stairs",
+                                                "key_input" : 40
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "chestR": {
+                                          "bk_img" : "walk_imgs/chestR.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "end",
+                                                "key_input" : 40
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "chestL": {
+                                          "bk_img" : "walk_imgs/chestL.png",
+                                          "next_state" : [
+
+                                             {
+                                                "state_name": "end",
+                                                "key_input" : 40
+                                             }
+                                             
+                                          ]
+                                       },
+                                       "dlc": {
+                                          "bk_img" : "walk_imgs/dlc.png"
+                                          
+                                       }
+
+                                       
+
+    }
+}
+
